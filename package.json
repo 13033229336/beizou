@@ -4,8 +4,9 @@
   "description": "beizou",
   "main": "index.js",
   "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy":"start deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -13,9 +14,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/13033229336/beizou/issues"
-  },
-  "homepage": "https://github.com/13033229336/beizou#readme"
+  "license": "ISC"
 }

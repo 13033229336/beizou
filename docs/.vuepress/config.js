@@ -4,6 +4,7 @@ module.exports = {
         ['link', { rel: 'icon', href: '/logo.png' }],    
     ],
     themeConfig: {
+      logo:'/logo.png',
         nav: [
             { text: '主页', link: '/' },
             { text: '博文',
@@ -20,5 +21,6 @@ module.exports = {
         sidebar: 'auto',     //侧边栏
         sidebarDepth: 2,
         lastUpdated: 'Last Updated', 
+        sidebar: require("./sidebar.js")
     },
 }
