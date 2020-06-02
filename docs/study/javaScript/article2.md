@@ -149,7 +149,7 @@ console.log(changeColor());     //undefined`
 
 此外，在局部作用域中定义的变量可以在局部环境中与全局变量互换使用，如下面这个例子所示：
 
-`var color = "blue";
+` var color = "blue";
 
 function changeColor(){
     var anotherColor = "red";
@@ -167,7 +167,9 @@ function changeColor(){
 }
 
 // 这里只能访问color
-changeColor();`
+changeColor(); 
+
+`
 
 以上代码共涉及3个执行环境：全局环境、`changeColor()` 的局部环境和 `swapColors()` 的局部环境。全局环境中有一个变量 `color` 和一个函数 `changeColor()`。`changeColor()` 的局部环境中有一个名为 `anotherColor` 的变量和一个名为 `swapColors()` 的函数，但它也可以访问全局环境中的变量 `color`。`swapColors()` 的局部环境中有一个变量 `tempColor`，该变量只能在这个环境中访问到。无论全局环境还是 `changeColor()` 的局部环境都无权访问 `tempColor`。然而，在 `swapColors()` 内部则可以访问其他两个环境中的所有变量，因为那两个环境是它的父执行环境。
 
@@ -177,7 +179,7 @@ changeColor();`
 
 **由于在 Javascript 语言中，只有函数内部的子函数才能读取局部变量，因此可以把闭包简单理解成定义在一个函数内部的函数。**
 
-### 闭包的用途
+ 闭包的用途
 
 闭包可以用在许多地方。它的最大用处有两个，一个是可以读取函数内部的变量（作用域链），另一个就是让这些变量的值始终保持在内存中。怎么来理解这句话呢？请看下面的代码。
 
