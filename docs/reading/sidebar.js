@@ -3,14 +3,14 @@ module.exports = [
         title: 'CSS',
         collapsable: false,
         children: [
-           
+          
         ]
     },
     {
         title: 'JavaScript',
         collapsable: false,
         children: [
-           
+            './javascript/this'
         ]
     },
     {
@@ -18,6 +18,13 @@ module.exports = [
         collapsable: false,
         children: [
            
+        ]
+    },
+    {
+        title: '浏览器系列',
+        collapsable: false,
+        children: [
+           './browser/article1'
         ]
     }
 ]
