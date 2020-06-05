@@ -14,10 +14,10 @@ module.exports = [
         ]
     },
     {
-        title: 'react系列',
+        title: '前端面试题',
         collapsable: false,
         children: [
-           
+           './interviews/article1'
         ]
     }
 ]
