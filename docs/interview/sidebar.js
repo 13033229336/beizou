@@ -17,7 +17,8 @@ module.exports = [
         title: '前端面试题',
         collapsable: false,
         children: [
-           './interviews/article1'
+           './interviews/article1',
+           './interviews/websocket'
         ]
     }
 ]
