@@ -1,7 +1,7 @@
 # css 之居中
 
 ***给 div 设置一个宽度，然后添加 margin:0auto 属性***
-
+```css
  div{
 
 ​      width: 200px;
@@ -11,9 +11,9 @@
 ​      background-color: blue;
 
 ​    }
-
+```
 #### 利用 text-align:center 实现
-
+```css
 .container {
 
 ​      background: rgba(0, 0, 0, 0.5);
@@ -35,13 +35,13 @@
 ​      background-color: pink;
 
 ​    }
-
+```
 ![](F:\lesson_shuidi\css\盒子居中的五种方法\2.png)
 
 
 
 #### -让绝对定位的 div 居中
-
+```css
  div {
 
 ​      position: absolute;
@@ -63,13 +63,13 @@
 ​      background-color: pink; /*方便看效果*/
 
 ​    }
-
+```
 ![](F:\lesson_shuidi\css\盒子居中的五种方法\.png)
 
  
 
 #### -水平垂直居中一
-
+```css
 .box{
 
 ​      /*确定容器的宽高宽500高300的层设置层的外边距div{*/
@@ -89,11 +89,11 @@
 ​      background-color:pink;/*方便看效果*/      
 
 ​    }
-
+```
 ![](F:\lesson_shuidi\css\盒子居中的五种方法\3.png)
 
 #### -水平垂直居中二
-
+```css
 .box{
 
 ​      position: absolute; /*相对定位或绝对定位均可*/
@@ -111,9 +111,9 @@
 ​      background-color: pink; /*方便看效果*/
 
 ​    }
-
+```
 #### -水平垂直居中三
-
+```css
 /*利用flex布局实际使用时应考虑兼容性*/
 
 ​      .container {
@@ -137,12 +137,12 @@
 ​      background-color: pink; /*方便看效果*/
 
 ​      }
-
+```
 ![](F:\lesson_shuidi\css\盒子居中的五种方法\4.png)
 
 #### -水平垂直居中四
 
-```
+```css
 /*利用text-align:center和vertical-align:middle属性*/
 .container {
   position: fixed;

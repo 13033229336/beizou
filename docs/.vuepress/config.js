@@ -10,9 +10,7 @@ module.exports = {
             { text: '博文',
               items: [
                 { text: '个人学习', link: '/study/' },
-                { text: '学习笔记', link: '/reading/' },
-                { text: '优质文章', link: '/article/' },
-                { text: '面试经典', link: '/interview/' },
+           
               ] 
             },
             { text: '关于', link: '/about/' },
