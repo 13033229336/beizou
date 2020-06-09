@@ -4,6 +4,7 @@ module.exports = [
         collapsable: false,
         children: [
             './CSS/center',
+            './CSS/3len',
         ]
     },
     {
