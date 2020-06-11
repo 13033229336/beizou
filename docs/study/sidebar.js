@@ -39,7 +39,8 @@ module.exports = [
         children: [
             './Browser/article1',
             './Browser/article2',
-            './Browser/article3'
+            './Browser/article3',
+            './Browser/article4'
         ]
     },
     {
