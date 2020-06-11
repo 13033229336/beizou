@@ -13,7 +13,8 @@ module.exports = [
         children: [
             './javaScript/article1',
             './javaScript/article2',
-            './javaScript/article3'
+            './javaScript/article3',
+            './javaScript/article4'
         ]
     },
     {
