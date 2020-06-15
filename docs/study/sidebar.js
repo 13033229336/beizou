@@ -40,7 +40,8 @@ module.exports = [
             './Browser/article1',
             './Browser/article2',
             './Browser/article3',
-            './Browser/article4'
+            './Browser/article4',
+            './Browser/article5'
         ]
     },
     {
@@ -62,6 +63,13 @@ module.exports = [
         collapsable: false,
         children: [
            './Webpack/article1',
+        ]
+    },
+    {
+        title: '网络系列',
+        collapsable: false,
+        children: [
+           './network/article1',
         ]
     },
 ]
