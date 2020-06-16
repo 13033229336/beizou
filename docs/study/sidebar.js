@@ -5,6 +5,7 @@ module.exports = [
         children: [
             './CSS/center',
             './CSS/3len',
+            './CSS/position'
         ]
     },
     {
