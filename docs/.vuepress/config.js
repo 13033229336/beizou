@@ -14,7 +14,7 @@ module.exports = {
               ] 
             },
             { text: '关于', link: '/about/' },
-            { text: 'Github', link: 'https://github.com/13033229336' },
+            { text: 'Github', link: 'https://github.com/beizouyxh' },
         ],
         sidebar: 'auto',     //侧边栏
         sidebarDepth: 2,
