@@ -31,7 +31,7 @@ module.exports = [
         title: 'Vue系列',
         collapsable: false,
         children: [
-          
+           './Vue/acticle1'
         ]
     },
     {
