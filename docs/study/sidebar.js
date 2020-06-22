@@ -57,6 +57,7 @@ module.exports = [
         collapsable: false,
         children: [
            './interview/360',
+           './interview/liang'
         ]
     },
     {
@@ -71,6 +72,7 @@ module.exports = [
         collapsable: false,
         children: [
            './network/article1',
+           './network/article2'
         ]
     },
 ]
