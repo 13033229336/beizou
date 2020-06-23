@@ -15,7 +15,8 @@ module.exports = [
             './javaScript/article1',
             './javaScript/article2',
             './javaScript/article3',
-            './javaScript/article4'
+            './javaScript/article4',
+            './javaScript/flatten'
         ]
     },
     {
