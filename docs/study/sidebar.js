@@ -73,7 +73,8 @@ module.exports = [
         collapsable: false,
         children: [
            './network/article1',
-           './network/article2'
+           './network/article2',
+           './network/http'
         ]
     },
 ]
