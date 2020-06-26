@@ -17,7 +17,8 @@ module.exports = [
             './javaScript/article3',
             './javaScript/article4',
             './javaScript/flatten',
-            './javaScript/extends'
+            './javaScript/extends',
+            './javaScript/promise'
         ]
     },
     {
