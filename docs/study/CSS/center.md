@@ -1,200 +1,185 @@
-# css 之居中
+# 水平垂直居中
 
-***给 div 设置一个宽度，然后添加 margin:0auto 属性***
-```css
- div{
+## 定宽高
 
-​      width: 200px;
+### 绝对定位+margin
 
-​      margin: 0 auto;
-
-​      background-color: blue;
-
-​    }
+```html
+  .box{
+            width: 200px;
+            height: 200px;
+            border: lime solid 1px;
+            position: relative;
+        }
+   .children-box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            margin: -50px 0 0 -50px;
+            background-color: limegreen;
+    }
 ```
-#### 利用 text-align:center 实现
+
+### 绝对定位+transform
+
 ```css
-.container {
-
-​      background: rgba(0, 0, 0, 0.5);
-
-​      text-align: center;
-
-​      font-size: 0;
-
-​    }
-
-​    .box {
-
-​      display: inline-block;
-
-​      width: 500px;
-
-​      height: 400px;
-
-​      background-color: pink;
-
-​    }
+ .box{
+            width: 200px;
+            height: 200px;
+            border: lime solid 1px;
+            position: relative;
+        }
+  .children-box{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            top: 50%;
+            background-color: lime;
+            transform: translate(-50%,-50%);
+   }
 ```
-![](F:\lesson_shuidi\css\盒子居中的五种方法\2.png)
 
+### flex布局
 
-
-#### -让绝对定位的 div 居中
 ```css
- div {
-
-​      position: absolute;
-
-​      width: 300px;
-
-​      height: 300px;
-
-​      margin: auto;
-
-​      top: 0;
-
-​      left: 0;
-
-​      bottom: 0;
-
-​      right: 0;
-
-​      background-color: pink; /*方便看效果*/
-
-​    }
+ .box{
+            width: 200px;   
+            height: 200px;
+            border: lightseagreen solid 1px;
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+        .children-box{
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+        }
 ```
-![](F:\lesson_shuidi\css\盒子居中的五种方法\.png)
 
- 
+### grid布局
 
-#### -水平垂直居中一
 ```css
-.box{
+  .box{
+            width: 200px;
+            height: 200px;
+            border: limegreen 1px solid;
+            display: grid;
+        }
+   .children-box{
+            width: 100px;
+            height: 100px;
+            background-color: magenta;
+            margin: auto;
 
-​      /*确定容器的宽高宽500高300的层设置层的外边距div{*/
-
-​      position:absolute;/*绝对定位*/
-
-​      width:500px;
-
-​      height:300px;
-
-​      top:50%;
-
-​      left:50%;
-
-​      margin:-150px 0 0 -250px;/*外边距为自身宽高的一半*/
-
-​      background-color:pink;/*方便看效果*/      
-
-​    }
+     }
 ```
-![](F:\lesson_shuidi\css\盒子居中的五种方法\3.png)
 
-#### -水平垂直居中二
+## 不定宽高
+
+### 绝对定位+transform
+
 ```css
-.box{
-
-​      position: absolute; /*相对定位或绝对定位均可*/
-
-​      width: 500px;
-
-​      height: 300px;
-
-​      top: 50%;
-
-​      left: 50%;
-
-​      transform: translate(-50%, -50%);
-
-​      background-color: pink; /*方便看效果*/
-
-​    }
+  .box{
+            width: 200px;
+            height: 200px;
+            border: darkorange 1px solid;
+            position: relative;
+        }
+   .children-box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            background-color: darksalmon;
+        }
 ```
-#### -水平垂直居中三
-```css
-/*利用flex布局实际使用时应考虑兼容性*/
 
-​      .container {
-
-​      display: flex;
-
-​      align-items: center; /*垂直居中*/
-
-​      justify-content: center; /*水平居中*/
-
-​      background-color:blue;
-
-​      }
-
-​      .box {
-
-​      width: 100px;
-
-​      height: 100px;
-
-​      background-color: pink; /*方便看效果*/
-
-​      }
-```
-![](F:\lesson_shuidi\css\盒子居中的五种方法\4.png)
-
-#### -水平垂直居中四
+### flex布局
 
 ```css
-/*利用text-align:center和vertical-align:middle属性*/
-.container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  text-align: center;
-  font-size: 0;
-  white-space: nowrap;
-  overflow: auto;
-}
-
-.container::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
-}
-
 .box {
-  display: inline-block;
-  width: 500px;
-  height: 400px;
-  background-color: pink;
-  white-space: normal;
-  vertical-align: middle;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+ .children-box {
+            background: yellow;
+}
 ```
 
-![](F:\lesson_shuidi\css\盒子居中的五种方法\5.png)
+### flex布局二
 
-
-
-### 总结
-
+```css
+ .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            display: flex;
+        }
+        .children-box {
+            background: yellow;
+            margin: auto;
+        }
 ```
-对于宽高固定的元素
 
-（1）我们可以利用margin:0auto来实现元素的水平居中。
+### grid-flex布局
 
-（2）利用绝对定位，设置四个方向的值都为0，并将margin设置为auto，由于宽高固定，因此      对应方向实现平分，可以实现水平和垂直方向上的居中。
-
-（3）利用绝对定位，先将元素的左上角通过top:50%和left:50%定位到页面的中心，然后再通       过margin负值来调整元素的中心点到页面的中心。
+```css
+ .box{
+            width: 200px;
+            height: 200px;
+            border: indigo 1px solid;
+            display: grid;
+        }
+  .children-box{
+        background-color: lawngreen;
+        align-self: center;
+        justify-self: center;
+   }
 ```
 
+### grid + margin 
+
+```css
+  .box{
+            width: 200px;
+            height: 200px;
+            border: lawngreen solid 1px;
+            display: grid;
+        }
+        .children-box{
+            background-color: lightseagreen;
+            margin: auto;
+        }
 ```
-对于宽高不定的元素，上面的后面两种方法，可以实现元素的垂直和水平的居中。
 
-（4）利用绝对定位，先将元素的左上角通过top:50%和left:50%定位到页面的中心，然后再通      过translate来调整元素的中心点到页面的中心。
+### table 布局
 
-（5）使用flex布局，通过align-items:center和justify-content:center设置容器的垂直      和水平方向上为居中对齐，然后它的子元素也可以实现垂直和水平的居中。
+```css
+ .box{
+            width: 200px;
+            height: 200px;
+            border: lawngreen 1px solid;
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+.children-box{
+            background-color: lawngreen;
+            display: inline-block;
+ }
+```
 
+```html
+<div class="box">
+        <div class="children-box">123</div>
+    </div>
 ```
 
