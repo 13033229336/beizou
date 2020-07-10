@@ -61,7 +61,8 @@ module.exports = [
         collapsable: false,
         children: [
            './interview/360',
-           './interview/liang'
+           './interview/liang',
+           './interview/tuya'
         ]
     },
     {
