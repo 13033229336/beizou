@@ -90,8 +90,13 @@ v-model指令在表单input,textarea,select等元素上创建双向绑定
 
 ## vuex
 
-vuex是vue的状态管理系统，核心是store仓库，包含着大部分状态state\
+vuex是vue的状态管理系统，核心是store仓库，包含着大部分状态state
 
+好处：
+
+1.集中管理共享数据，易于开发和后期维护
+2.实现组件之间的通信，提高开发效率
+3.响应式，能够实时保持数据和页面的同步
 特点;
 
 ​          1.vuex响应式的，组件从store读取状态时，如果状态发生变化，相应组件状态也会更新
@@ -100,10 +105,10 @@ vuex是vue的状态管理系统，核心是store仓库，包含着大部分状�
 
 模块：
 
-- state:定义了应用状态额数据结构，可以设置默认初始化
-- Getter: 允许组件从store中获取数据，mapGetters辅助函数仅仅是将store中的getter映射到局部计算属性
-- mutation: 更改store中的状态，同步函数
-- action: 用于提交mutation ，不变更状态，可以包含任何异步操作
+- state: 提供唯一的公共数据源，所有共享的数据都要统一放到Store 的state中进行存储 ,使用：在要使用的组件中this.$store.state.属性；或在computed中...mapState([属性])
+- Getter: 允许组件从store中获取数据(只起到包装作用，不会修改)，this.$store.getters.名称和...mapGetters辅助函数仅仅是将store中的getter映射到局部计算属性
+- mutation: 修改store中的状态(不允许组件中修改状态)，this.$store.commit('mutation中的方法')触发和...mapMutations，同步函数,不能执行异步函数;
+- action: 用于提交mutation ，this.$store.dispatch和mapActions不变更状态，可以包含任何异步操作
 - module:允许将单一的store拆分为多个store,且同时保存单一的状态树中。
 
 ## Vue SSR 
