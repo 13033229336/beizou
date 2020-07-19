@@ -246,8 +246,31 @@ console.log(Bar.prototype);      //undefined
 ## CSS3 新特性
 
 1.边框   
+border-image边框图片
+border-radius圆角  
 
-border-radius圆角     box-shadow
+2.阴影
+box-shadow盒子阴影
+
+3.选择器
+伪类选择器：nth-child(n)/ntj-last-child(n),nth-of-type(n)/nth-last-of-type,first-child/last-child,disabled/enabled...
+
+4.transition过渡
+transition： CSS属性，花费时间，效果曲线(默认ease)，延迟时间(默认0)
+
+5.animation 动画
+animation：动画名称，一个周期花费时间，运动曲线（默认ease），动画延迟（默认0），播放次数（默认1），是否反向播放动画（默认normal），是否暂停动画（默认running）
+
+6.transform 形状转换
+transform:rotate旋转
+transform:translate（）平移
+transform:scale()缩放
+
+7.rgba(rbg为颜色值，a为透明度)
+
+8.Filter(滤镜)
+
+9.flex,grid布局
 
 
 
