@@ -53,3 +53,32 @@ context是一个全局变量,像是一个大容器,在任何地方都可以访�
 3. redux全局状态管理
 4. 非父子组件，用发布订阅模式的Event模块
 
+## react hooks
+钩子函数
+1.useState:用来声明状态变量。接收两个参数，第一个为状态初始值，第二个为改变状态的方法函数。
+2.useEffect:相当于componentDidMount、componentDidUpdate、componentWillUnmount的集合，可以用来消除副作用。
+3.useContext:父子组件传值。
+4.useReducer:可以实现类似于redux的功能。
+
+## redux
+react的状态管理
+适用于多交互、多数据源的场景：
+```text
+  1.某个组件的状态，需要共享
+  2.某个状态需要在任何地方都要拿到
+  3.一个组件需要改变全局状态
+  4.一个组件需要改变另一个组件的状态
+```
+三大原则:
+  1. store:存储整个应用的state(组件还是可以维护自身的state)
+  2. state是只读的，state的变化，会导致视图的变化。用户接触不到state,只能接触视图，唯一改变state的方法是在视图中触发action
+  3. 使用reducers来执行state的更新。reducer十一个纯函数，接受action和当前的state作为参数，通过计算返回一个新的state,从而实现视图的更新
+
+  工作流程是：
+
+view 用 actionCreator 创建一个 action,里面可能包含一些数据
+使用 store 的 dispatch 方法将 acion 传入 store
+store 将 action 与旧的 state 转发给 reducer
+reducer 深拷贝 state,并返回一个新的 state 给 store
+store 接收并更新 state
+使用 store.subscribe 订阅更新,重新 render 组件
