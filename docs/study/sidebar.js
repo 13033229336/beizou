@@ -50,10 +50,10 @@ module.exports = [
         ]
     },
     {
-        title: '算法系列',
+        title: 'Git',
         collapsable: false,
         children: [
-           
+           './Git/git'
         ]
     },
     {
