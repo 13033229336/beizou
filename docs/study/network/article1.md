@@ -5,7 +5,15 @@
 - Cookie的作用：**因为HTTP是无状态协议，对于事务处理没有记忆能力，每次客户端和服务端会话完成时，服务器端不会保存任何会话信息。**所以需要一个状态来对服务器和浏览器进行会话跟踪，告知服务器端前后两个请求是否来自同一浏览器。
 - cookie 存储在客户端： cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器下次向同一服务器再发起请求时被携带并发送到服务器上。
 - **cookie 是不可跨域的：** 每个 cookie 都会绑定单一的域名，无法在别的域名下获取使用，**一级域名和二级域名之间是允许共享使用的**（**靠的是 domain）**。
-
+### 字段
+1. name: cookie的名称
+2. value: cookie的值
+3. domain: 可以访问此cookie的域名
+4. path:可访问此cookie的页面路径
+5. expires/max-age： cookie的有效期
+6. size:cookie的大小
+7. httponly:是否携带cookie
+8. secure：设置是否只通过https来传递此条cookie.
 ## 2. Session
 
 - session是基于cookie实现的，session存储在服务器端，session会被存储到客户端的cookie中

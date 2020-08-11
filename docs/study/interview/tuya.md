@@ -52,9 +52,27 @@
 
 
 
-## vue的响应式原理
+## BFC
+块级格式上下文，里面的元素和外部的元素不会相互影响
+作用：清除浮动，避免垂直外边距的重叠，实现自适应布局（如：两栏布局）
 
+形成条件
+1. 浮动元素float除none以外的值
+2. position:absolute,fixed
+3. display:inline-blocks,table-cells,
+4. overflow除了visible以外（hidden,auto,scroll
+）
 
+## 模块化
+require:node 和 es6都支持引入
+export/import: 只有es6支持
+exprots/module.exports 只有node支持导出
+
+node的遵循commonJS
+
+import是异步加载，编译时加载，必须
+放在开头，不会将整个模块运行后赋值给某个变量
+require是同步加载，运行时加载模块
 
 
 
