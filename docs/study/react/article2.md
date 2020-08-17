@@ -76,9 +76,25 @@ react的状态管理
 
   工作流程是：
 
-view 用 actionCreator 创建一个 action,里面可能包含一些数据
-使用 store 的 dispatch 方法将 acion 传入 store
-store 将 action 与旧的 state 转发给 reducer
-reducer 深拷贝 state,并返回一个新的 state 给 store
+1. view 用 actionCreator 创建一个 action,里面可能包含一些数据
+2. 使用 store 的 dispatch 方法将 acion 传入 store
+3. store 将 action 与旧的 state 转发给 reducer
+4. reducer 深拷贝 state,并返回一个新的 state 给 store
 store 接收并更新 state
-使用 store.subscribe 订阅更新,重新 render 组件
+5. 使用 store.subscribe 订阅更新,重新 render 组件
+
+## state 和 props的区别
+1. state是组件自己管理状态，可以调用setState改变
+2. props是外部传入的数据参数，只能读取，不能改变
+
+## 高阶组件
+1. 高阶组件就是接收一个组件并返回一个新组件的函数
+2. 是从react的组合特性中衍生出来的，是纯组件。因为可以接收任何动态提供的组件，但不会修改或复制输入组件的任何行为
+
+场景：代码重写、引导和逻辑抽象，渲染劫持，state抽象和操作
+
+## 受控组件和非受控组件
+主要取决于组件是否受父级传入的props控制
+1. 受控组件受react控制的组件，是调单数据真实的唯一来源
+2. 非受控组件：由DOM处理表单数据，不受自身的state或者props控制，通常需要为其添加ref来访问它的地域DOM 
+
