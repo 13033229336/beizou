@@ -81,3 +81,12 @@ http://www.c.com:8002/content/delete/:id
   在HTTP头中有个Referer,记录该HTTP请求的来源地址，通过检查Referer，可以检查请求是否来自合法的“源”
 
 - 添加Token验证
+
+### OSI七层模型
+1. 应用层   HTTP，TFTP
+2. 表示层
+3. 会话层  ---DNS
+4. 传输层  ---TCP、UDP
+5. 网络层  ---IP
+6. 数据链路
+7. 物理层 

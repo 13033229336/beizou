@@ -6,7 +6,8 @@ module.exports = [
             './CSS/center',
             './CSS/3len',
             './CSS/position',
-            './CSS/2len'
+            './CSS/2len',
+            './CSS/zaji'
         ]
     },
     {

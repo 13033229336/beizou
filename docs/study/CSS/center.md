@@ -2,6 +2,27 @@
 
 ## 定宽高
 
+### 绝对定位加margin
+```css
+ div{
+             width: 600px;
+             height: 600px;
+             position: relative;
+             background-color: chartreuse;
+         }
+         .box{
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: pink; 
+         }
+```
+
 ### 绝对定位+margin
 
 ```html
@@ -38,7 +59,7 @@
             left: 50%;
             top: 50%;
             background-color: lime;
-            transform: translate(-50%,-50%);
+            transform: translate(-50px,-50px);
    }
 ```
 

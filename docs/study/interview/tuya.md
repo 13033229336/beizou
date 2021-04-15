@@ -63,9 +63,27 @@
 4. overflow除了visible以外（hidden,auto,scroll
 ）
 
+## 清除浮动
+
+1. 在浮动标签后新增一个标签设为 clear:both
+2. 父级元素添加overflow：hidden
+3. 使用伪元素清除浮动
+```css
+.clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+        content: "";
+        display: block;
+        height: 0;
+        clear:both;
+        visibility: hidden;
+    }
+    .clearfix{
+        *zoom: 1;/*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+    }
+```
+4. 父级元素设置高度
 ## 模块化
-require:node 和 es6都支持引入
-export/import: 只有es6支持
+require/module.exports: commonJS
+export/import: 只有es6支持 
 exprots/module.exports 只有node支持导出
 
 node的遵循commonJS
